@@ -34,8 +34,8 @@ export class YTDLPCard extends LitElement {
   // The user supplied configuration. Throw an exception and Home Assistant
   // will render an error card.
   setConfig(config) {
-    if (!config.entity || config.entity !== "downloader.yt_dlp") {
-      throw new Error("You need to define downloader.yt_dlp as entity");
+    if (!config.entity || config.entity !== "yt_dlp.downloader") {
+      throw new Error("You need to define yt_dlp.downloader as entity");
     }
     this._header = config.header === "" ? nothing : config.header;
     this._colour = config.colour === "" ? "#005eff" : config.colour;
